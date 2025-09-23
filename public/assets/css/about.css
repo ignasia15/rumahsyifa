@@ -1,0 +1,344 @@
+/* ================= Hero / Home Section ================= */
+.hero {
+  position: relative;
+  padding: 100px 10% 120px;
+  background: #eafcf0; /* hijau muda */
+  overflow: hidden;
+  margin-bottom: 80px; /* kasih jarak ke about */
+}
+
+/* Lingkaran dekoratif */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: rgba(40, 167, 69, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Text */
+.hero-text {
+  max-width: 550px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e3a2f;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #28a745;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #374151;
+}
+
+/* Tombol */
+.btn-template-outline {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #28a745;
+  color: #28a745;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.btn-template-outline:hover {
+  background: #28a745;
+  color: #fff;
+  box-shadow: 0px 12px 28px rgba(40, 167, 69, 0.3);
+}
+
+/* Gambar Home */
+.hero-img {
+  text-align: right;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-img img {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 8px solid #28a745;
+  object-fit: cover;
+}
+
+/* Responsive Home */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px 80px;
+    text-align: left;
+  }
+
+  .hero-img {
+    order: -1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .hero-img img {
+    width: 250px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+
+/* ================= About Section ================= */
+.about-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* dekorasi lingkaran hijau samar */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(40, 167, 69, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.about-section::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 280px;
+  height: 280px;
+  background: rgba(72, 187, 120, 0.15);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* isi about tetap di atas background */
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-images {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.about-images .img-box {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-images .img1 {
+  width: 60%;
+  align-self: flex-start;
+}
+
+.about-images .img2 {
+  width: 50%;
+  align-self: flex-end;
+}
+
+.about-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e3a2f;
+}
+
+.about-text h2 span {
+  color: #28a745;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #374151;
+}
+
+/* Responsive About */
+@media (max-width: 768px) {
+  .about-section {
+    text-align: left;
+    padding: 60px 20px;
+  }
+
+  .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-images .img1,
+  .about-images .img2 {
+    width: 80%;
+  }
+
+  .about-text {
+    margin-top: 40px;
+  }
+}
+
+.services-section {
+  padding: 100px 0;
+  background: #f9fffb; /* senada dengan home */
+}
+
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e3a2f;
+  margin-bottom: 20px;
+}
+
+.section-title p {
+  font-size: 17px;
+  color: #374151;
+  margin-bottom: 50px;
+}
+
+.services-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 25px;
+  flex: 1 1 300px;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(40, 167, 69, 0.2);
+}
+
+.service-card .icon {
+  font-size: 50px;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1e3a2f;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* testimonial area */
+.testimonial-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  margin: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  text-align: center;
+  min-height: 220px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #374151;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #28a745;
+  font-size: 15px;
+}
+
+.slick-dots {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #cbd5e0;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  background: #28a745;
+}
+
+
