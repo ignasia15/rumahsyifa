@@ -1,1 +1,1 @@
-Website profile sederhana yang dibangun menggunakan Laravel dan Bootstrap. Dibuat sebagai project pembelajaran dengan fitur CRUD lengkap.
+Website profile sederhana yang dibangun menggunakan Laravel dan Bootstrap. Dibuat sebagai project percobaan untuk klinik hipnoterapi milik ayah saya. yang nantinya akan saya kembangkan beberapa fitur seperti reservasi, jadwal terapis, dan lain lain
